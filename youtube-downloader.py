@@ -3,12 +3,11 @@ import youtube_dl
 
 
 '''
-Each line should consist of a title and url starting with http...
-ie songname http://www.youtube.com/?watch=whatever
-   songname2 http....
-or just urls without titles.  It'll grab the titles from their respective videos of origin
-
-Currently, it just ignores your title and takes the youtube video title.
+Each line should consist of a url starting with http...
+ie http://www.youtube.com/?watch=whatever
+   http....
+   http...
+The titles of each mp3 file will be the same as their respective videos of origin.
 '''
 fname = 'path-to-your-txt-file'
 
@@ -27,6 +26,7 @@ def separate(line):
 	#this separates the url and the identifying information, which will be used as the file title
 	#returns title, url
 	#if there is no title, it will still return the url along with a blank string as the title
+	
 
 	title, url = line.split('http')
 	try:
